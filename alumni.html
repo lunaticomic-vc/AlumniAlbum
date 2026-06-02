@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Алумни — Списък</title>
+    <link rel="stylesheet" href="./styles/alumni.css" />
+  </head>
+  <body>
+    <header>
+      <div class="left">
+        <a href="./homepage.html"><h1>Алумни Албум</h1></a>
+      </div>
+      <nav>
+        <a href="./homepage.html">Начало</a>
+        <a href="./clubs.html">Клубове</a>
+        <a href="./photos.html">Фото</a>
+      </nav>
+    </header>
+
+    <section class="filters">
+      <h2>Филтри</h2>
+      <div class="filter-row">
+        <input type="text" id="f-q" placeholder="Търси по име / факултетен №" />
+        <input type="text" id="f-specialty" placeholder="Специалност" />
+        <input type="text" id="f-stream" placeholder="Поток" />
+        <input type="number" id="f-year" placeholder="Випуск" />
+        <select id="f-degree">
+          <option value="">— Степен —</option>
+          <option value="bachelor">Бакалавър</option>
+          <option value="master">Магистър</option>
+          <option value="doctor">Доктор</option>
+        </select>
+        <button id="f-apply">Приложи</button>
+      </div>
+    </section>
+
+    <main>
+      <div id="alumni-container" class="alumni-container"></div>
+    </main>
+
+    <script src="./js/alumni.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+body { font-family: Arial, sans-serif; background: #f3e5f5; margin: 0; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+header h1 { color: #6a1b9a; margin: 0; }
+nav a { margin-left: 16px; color: #6a1b9a; text-decoration: none; }
+
+main { padding: 16px; }
+
+.new-club {
+  background: #ede7f6;
+  padding: 16px;
+  border-radius: 10px;
+  margin: 16px 0;
+}
+#club-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#club-form input, #club-form select {
+  padding: 8px;
+  border: 1px solid #6a1b9a;
+  border-radius: 5px;
+}
+#club-form button {
+  padding: 8px 16px;
+  background: #8e24aa;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.clubs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.club-card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.06);
+}
+.club-card h4 { margin: 0 0 8px 0; color: #4a148c; }
+.club-card button {
+  padding: 6px 12px;
+  background: #8e24aa;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

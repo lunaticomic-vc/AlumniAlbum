@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Качи снимка</title>
+    <link rel="stylesheet" href="./styles/upload.css" />
+  </head>
+  <body>
+    <header>
+      <div class="left">
+        <a href="./homepage.html"><h1>Алумни Албум</h1></a>
+      </div>
+      <nav>
+        <a href="./photos.html">Към фото албума</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Качи снимка</h2>
+      <p>Може да качиш снимка от личния си архив, или като фотограф/колега да качиш снимка за конкретен алумни.</p>
+
+      <form id="upload-form" enctype="multipart/form-data">
+        <div class="form-item">
+          <label for="photo">Файл:</label>
+          <input type="file" name="photo" id="photo" accept="image/*" required />
+        </div>
+
+        <div class="form-item">
+          <label for="source">Източник:</label>
+          <select name="source" id="source">
+            <option value="personal">Личен архив</option>
+            <option value="photographer">От фотограф</option>
+            <option value="other">Друг</option>
+          </select>
+        </div>
+
+        <div class="form-item">
+          <label for="alumni_id">За кой алумни (ID, по избор):</label>
+          <input type="number" name="alumni_id" id="alumni_id" />
+        </div>
+
+        <div class="form-item">
+          <label for="session_id">Сесия (ID, по избор):</label>
+          <input type="number" name="session_id" id="session_id" />
+        </div>
+
+        <div class="form-item">
+          <label for="date_taken">Дата на заснемане:</label>
+          <input type="date" name="date_taken" id="date_taken" />
+        </div>
+
+        <div class="form-item">
+          <label for="caption">Описание:</label>
+          <input type="text" name="caption" id="caption" />
+        </div>
+
+        <div class="form-item button-container">
+          <button type="submit">Качи</button>
+        </div>
+      </form>
+
+      <div id="response-message"></div>
+    </main>
+
+    <script src="./js/upload.js"></script>
+  </body>
+</html>

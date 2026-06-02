@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Фото албум</title>
+    <link rel="stylesheet" href="./styles/photos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="left">
+        <a href="./homepage.html"><h1>Алумни Албум</h1></a>
+      </div>
+      <nav>
+        <a href="./homepage.html">Начало</a>
+        <a href="./alumni.html">Алумни</a>
+        <a href="./clubs.html">Клубове</a>
+        <a href="./upload.html">Качи</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Фото албум</h2>
+      <div class="filters">
+        <input type="number" id="f-alumni-id" placeholder="Алумни ID (по избор)" />
+        <input type="number" id="f-session-id" placeholder="Сесия ID (по избор)" />
+        <button id="f-apply">Филтрирай</button>
+      </div>
+      <div id="photos-container" class="photos-container"></div>
+    </main>
+
+    <script src="./js/photos.js"></script>
+  </body>
+</html>

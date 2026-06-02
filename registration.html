@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/register.css" />
+    <script defer src="./js/send_form.js"></script>
+    <title>Регистрация — Алумни Албум</title>
+  </head>
+  <body>
+    <main>
+      <h2 style="text-align:center">Регистрация на алумни</h2>
+      <form id="registration-form">
+        <div class="form-item">
+          <label for="fullname"><span>Три имена:</span></label>
+          <input type="text" placeholder="Иван Петров Георгиев" autocomplete="off" required name="fullname" id="fullname" />
+        </div>
+
+        <div class="form-item">
+          <label for="fn"><span>Факултетен номер:</span></label>
+          <input type="text" placeholder="напр. 81234" autocomplete="off" required name="fn" id="fn" />
+        </div>
+
+        <div class="form-item">
+          <label for="username"><span>Потребителско име:</span></label>
+          <input type="text" autocomplete="off" required name="username" id="username" />
+        </div>
+
+        <div class="form-item">
+          <label for="email"><span>Имейл:</span></label>
+          <input type="email" required name="email" id="email" />
+        </div>
+
+        <div class="form-item">
+          <label for="specialty"><span>Специалност:</span></label>
+          <input type="text" placeholder="напр. Информатика" name="specialty" id="specialty" />
+        </div>
+
+        <div class="form-item">
+          <label for="stream"><span>Поток:</span></label>
+          <input type="text" placeholder="напр. A" name="stream" id="stream" />
+        </div>
+
+        <div class="form-item">
+          <label for="graduation_year"><span>Випуск (година):</span></label>
+          <input type="number" min="1900" max="2099" name="graduation_year" id="graduation_year" />
+        </div>
+
+        <div class="form-item">
+          <label for="degree"><span>Степен:</span></label>
+          <select name="degree" id="degree">
+            <option value="bachelor">Бакалавър</option>
+            <option value="master">Магистър</option>
+            <option value="doctor">Доктор</option>
+          </select>
+        </div>
+
+        <div class="form-item">
+          <label for="password"><span>Парола:</span></label>
+          <input type="password" required name="password" id="password" />
+        </div>
+
+        <div class="form-item">
+          <label for="repeat-password"><span>Повторете паролата:</span></label>
+          <input type="password" required name="repeat_password" id="repeat-password" />
+        </div>
+
+        <div class="form-item button-container">
+          <button type="submit" id="register-button">Регистриране</button>
+        </div>
+
+        <div class="form-item no-display" id="response-message"></div>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заявка за печат</title>
+    <link rel="stylesheet" href="./styles/print_order.css" />
+  </head>
+  <body>
+    <header>
+      <div class="left">
+        <a href="./homepage.html"><h1>Алумни Албум</h1></a>
+      </div>
+      <nav>
+        <a href="./photos.html">Към фото албума</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Заявка за печат</h2>
+      <p>Поръчай печат на албум, картички, календар, чаша или карти за бридж.</p>
+
+      <form id="print-form">
+        <div class="form-item">
+          <label for="product_type">Продукт:</label>
+          <select name="product_type" id="product_type" required>
+            <option value="album">Албум</option>
+            <option value="postcard">Картичка</option>
+            <option value="calendar">Календар</option>
+            <option value="mug">Чаша</option>
+            <option value="bridge_cards">Карти за бридж</option>
+          </select>
+        </div>
+
+        <div class="form-item">
+          <label for="photo_ids">ID-та на снимки (разделени със запетая):</label>
+          <input type="text" id="photo_ids" placeholder="напр. 1,2,5" />
+        </div>
+
+        <div class="form-item">
+          <label for="quantity">Брой:</label>
+          <input type="number" id="quantity" min="1" value="1" />
+        </div>
+
+        <div class="form-item">
+          <label for="note">Бележка:</label>
+          <input type="text" id="note" />
+        </div>
+
+        <div class="form-item button-container">
+          <button type="submit">Поръчай</button>
+        </div>
+      </form>
+
+      <div id="response-message"></div>
+    </main>
+
+    <script src="./js/print_order.js"></script>
+  </body>
+</html>

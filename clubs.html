@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Клубове</title>
+    <link rel="stylesheet" href="./styles/clubs.css" />
+  </head>
+  <body>
+    <header>
+      <div class="left">
+        <a href="./homepage.html"><h1>Алумни Албум</h1></a>
+      </div>
+      <nav>
+        <a href="./homepage.html">Начало</a>
+        <a href="./alumni.html">Алумни</a>
+        <a href="./photos.html">Фото</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Алумни клубове</h2>
+      <p>Клубовете групират алумни по специалност, поток, випуск, преподавател или степен.</p>
+
+      <section class="new-club">
+        <h3>Създай клуб</h3>
+        <form id="club-form">
+          <input type="text" id="c-name" placeholder="Име на клуба" required />
+          <select id="c-type" required>
+            <option value="">— тип —</option>
+            <option value="specialty">Специалност</option>
+            <option value="stream">Поток</option>
+            <option value="year">Випуск</option>
+            <option value="teacher">Преподавател</option>
+            <option value="degree">Степен</option>
+          </select>
+          <input type="text" id="c-description" placeholder="Описание" />
+          <button type="submit">Създай</button>
+        </form>
+        <div id="club-response"></div>
+      </section>
+
+      <section>
+        <h3>Съществуващи клубове</h3>
+        <div id="clubs-container" class="clubs-container"></div>
+      </section>
+    </main>
+
+    <script src="./js/clubs.js"></script>
+  </body>
+</html>

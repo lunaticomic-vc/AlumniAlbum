@@ -1,0 +1,6 @@
+.DS_Store
+.omc/
+models/uploads/*
+!models/uploads/.gitkeep
+*.log
+README.md
