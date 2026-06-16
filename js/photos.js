@@ -30,9 +30,24 @@ function loadPhotos() {
           <img src="./${p.image_dir}" alt="${escape(p.name)}" onerror="this.style.display='none'" />
           <p>${escape(p.caption || p.name)}</p>
           <small>Източник: ${escape(p.source)} &middot; Качи: ${escape(p.uploader_name || "-")}</small>
+          <button class="delete-btn" onclick="deletePhoto(${p.id})">Изтрий</button>
         `;
         container.appendChild(div);
       });
+    });
+}
+
+function deletePhoto(photoId) {
+  if (!confirm("Сигурен ли си, че искаш да изтриеш снимката?")) return;
+  fetch("./models/delete_photo.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ photo_id: photoId })
+  })
+    .then((r) => r.json())
+    .then((d) => {
+      alert(d.message);
+      if (d.status === "SUCCESS") loadPhotos();
     });
 }
 

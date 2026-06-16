@@ -38,10 +38,25 @@ function loadClubs() {
             <p>${escape(c.description || "")}</p>
             <p>Членове: ${c.member_count} &middot; Създал: ${escape(c.owner_name || "-")}</p>
             <button onclick="window.location.href='./alumni.html'">Виж алумни</button>
+            <button class="delete-btn" onclick="deleteClub(${c.id})">Изтрий</button>
           `;
           container.appendChild(div);
         });
       }
+    });
+}
+
+function deleteClub(clubId) {
+  if (!confirm("Сигурен ли си, че искаш да изтриеш клуба?")) return;
+  fetch("./models/delete_club.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ club_id: clubId })
+  })
+    .then((r) => r.json())
+    .then((d) => {
+      alert(d.message);
+      if (d.status === "SUCCESS") loadClubs();
     });
 }
 

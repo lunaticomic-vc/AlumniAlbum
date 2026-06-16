@@ -48,3 +48,25 @@ button:hover { background: #7b1fa2; }
   text-align: center;
   color: #4a148c;
 }
+
+.orders-container {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+.order-card {
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+.delete-btn {
+  padding: 6px 12px;
+  background: #c2185b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.delete-btn:hover { background: #ad1457; }
