@@ -1,7 +1,4 @@
 <?php
-/**
- * DB connection wrapper.
- */
 class DB {
     private $connection;
 

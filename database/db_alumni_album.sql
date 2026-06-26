@@ -1,6 +1,10 @@
 -- phpMyAdmin SQL Dump
--- Alumni Album database
--- Run this in phpMyAdmin (Import) to create the schema with sample data.
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,7 +24,7 @@ USE `alumni_album`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users` (алумни профили)
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -53,7 +57,7 @@ INSERT INTO `users` (`id`, `fullname`, `fn`, `email`, `username`, `password`, `s
 -- --------------------------------------------------------
 
 --
--- Table structure for table `clubs` (алумни клубове)
+-- Table structure for table `clubs`
 --
 
 CREATE TABLE `clubs` (
@@ -75,7 +79,7 @@ INSERT INTO `clubs` (`id`, `name`, `type`, `description`, `owner_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `club_members` (членство в клубове)
+-- Table structure for table `club_members`
 --
 
 CREATE TABLE `club_members` (
@@ -98,8 +102,7 @@ INSERT INTO `club_members` (`id`, `club_id`, `user_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `validations` (валидиране на алумни профил)
--- Бивш студент качва 'доказателство' или текст и 2-3 колеги/преподавател потвърждават.
+-- Table structure for table `validations`
 --
 
 CREATE TABLE `validations` (
@@ -121,7 +124,7 @@ INSERT INTO `validations` (`id`, `alumni_id`, `validator_id`, `evidence_text`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `photo_sessions` (фото сесии)
+-- Table structure for table `photo_sessions`
 --
 
 CREATE TABLE `photo_sessions` (
@@ -167,7 +170,7 @@ INSERT INTO `photos` (`id`, `uploader_id`, `alumni_id`, `session_id`, `image_dir
 -- --------------------------------------------------------
 
 --
--- Table structure for table `business_cards` (визитки)
+-- Table structure for table `business_cards`
 --
 
 CREATE TABLE `business_cards` (
@@ -189,7 +192,7 @@ INSERT INTO `business_cards` (`id`, `alumni_id`, `title`, `company`, `phone`, `e
 -- --------------------------------------------------------
 
 --
--- Table structure for table `print_orders` (заявки за печат - албуми, картички, календари, чаши, карти за бридж)
+-- Table structure for table `print_orders`
 --
 
 CREATE TABLE `print_orders` (
